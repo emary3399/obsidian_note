@@ -1,4 +1,4 @@
-# Obsidian公基考公笔记指南
+# Obsidian公基笔记指南
 ## 一、笔记概述
 这是一个专门为公共基础知识（公基）考公备考打造的Obsidian笔记库，堪称公基知识学习的宝库，在Obsidian中打开，能借助其强大的知识管理与关联功能，让公基学习更加高效、系统。
 
@@ -21,11 +21,3 @@
 2. **新建Feat_xxx分支**：进入你Fork后的仓库，点击“新建分支”，输入分支名称，建议采用“Feat_具体改进内容”的格式，如“Feat_补充法律新知识点” ，方便区分和识别。
 3. **提交代码**：在你本地的Obsidian中，对笔记进行修改完善，完成后，将修改后的内容提交到你刚刚创建的分支中。
 4. **新建Pull Request**：回到托管平台上你Fork后的仓库页面，点击“新建拉取请求”，选择你修改的分支与原仓库的主分支进行对比，确认无误后提交拉取请求，等待审核通过。
-
-## 六、拓展资源
-1. **多语言支持**：使用Readme_XXX.md来支持不同的语言，例如Readme_en.md用于英文说明，Readme_zh.md用于中文说明，方便不同语言背景的学习者使用。
-2. **Gitee官方博客**：访问[blog.gitee.com](https://blog.gitee.com) ，了解Gitee平台的最新动态、使用技巧以及开源社区的精彩故事。
-3. **探索优秀开源项目**：通过[https://gitee.com/explore](https://gitee.com/explore) 这个地址，发现Gitee上众多优秀的开源项目，拓宽技术视野，学习更多项目经验。
-4. **GVP（Gitee最有价值开源项目）**：[https://gitee.com/gvp](https://gitee.com/gvp) ，这里汇聚了综合评定出的优秀开源项目，能从中获取灵感和参考。
-5. **Gitee官方使用手册**：[https://gitee.com/help](https://gitee.com/help) ，遇到关于Gitee使用的任何问题，都能在这里找到答案。
-6. **Gitee封面人物**：[https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/) ，这是一档展示Gitee会员风采的栏目，了解优秀开发者的经验与故事 。 

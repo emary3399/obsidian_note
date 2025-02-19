@@ -1,265 +1,149 @@
-以下是修改后的 Markdown 格式，使其更清晰易读：
+````markdown name=Mermaid使用大全笔记.md
+# Mermaid使用大全笔记
 
----
+Mermaid是一种基于Markdown的图表和图形生成工具，非常适合在Obsidian中使用。以下是Mermaid的使用大全笔记，包含各种图表类型的示例和常用语法。
 
-## 1. **基本语法**
+## 基本语法
 
-**渲染效果：**
+Mermaid图表的基本语法如下：
 
-```mermaid
+\```
+\```mermaid
 graph TD
-    节点1 --> 节点2
-    节点1 --> 节点3
-    节点2 --> 节点4
-```
+    A[方形] --> B(圆形)
+    B --> C{菱形}
+    C --> D[方形]
+\```
+\```
 
-**原始代码：**
+上面的例子生成了一个从A到D的图表，其中A指向B，B指向C，C指向D。
 
-```mermaid
-graph [方向]
-    节点1 --> 节点2
-    节点1 --> 节点3
-    节点2 --> 节点4
-```
+## 流程图
 
-**方向选项：**
-- `TD`（Top Down）：从上到下
-- `LR`（Left Right）：从左到右
-- `RL`（Right Left）：从右到左
-- `BT`（Bottom Top）：从下到上
+流程图是Mermaid中最常用的图表类型之一。以下是一个流程图的示例：
 
-**示例：**
-
-```mermaid
-graph LR
-    A --> B
-    A --> C
-    B --> D
-```
-
-这段代码会创建一个从左到右的思维导图。
-
----
-
-## 2. **节点和连线**
-
-**渲染效果：**
-
-```mermaid
-graph LR
-    A([圆形节点]) --> B{圆角矩形}
-    B --> C[矩形节点]
-```
-
-**原始代码：**
-
-```mermaid
-graph LR
-    A([圆形节点]) --> B{圆角矩形}
-    B --> C[矩形节点]
-```
-
----
-
-## 3. **子图（Subgraphs）**
-
-**渲染效果：**
-
-```mermaid
-graph LR
-    subgraph 组1
-        A[节点A]
-        B[节点B]
-    end
-    subgraph 组2
-        C[节点C]
-    end
-    A --> C
-    B --> C
-```
-
-**原始代码：**
-
-```mermaid
-graph LR
-    subgraph 组1
-        A[节点A]
-        B[节点B]
-    end
-    subgraph 组2
-        C[节点C]
-    end
-    A --> C
-    B --> C
-```
-
----
-
-## 4. **条件和决策**
-
-**渲染效果：**
-
-```mermaid
-graph LR
-    A[开始] --> B{决策}
-    B -- 是 --> C[操作1]
-    B -- 否 --> D[操作2]
-    C --> E[结束]
-    D --> E[结束]
-```
-
-**原始代码：**
-
-```mermaid
-graph LR
-    A[开始] --> B{决策}
-    B -- 是 --> C[操作1]
-    B -- 否 --> D[操作2]
-    C --> E[结束]
-    D --> E[结束]
-```
-
----
-
-## 5. **循环**
-
-**渲染效果：**
-
-```mermaid
+\```
+\```mermaid
 graph TD
-    A --> B
-    B --> C
-    C --> D
-    D --> A // 创建循环
-```
+    开始 --> 输入数据
+    输入数据 --> 处理数据
+    处理数据 --> 判断{数据有效吗}
+    判断 -->|是| 输出结果
+    判断 -->|否| 结束
+\```
+\```
 
-**原始代码：**
+## 序列图
 
-```mermaid
-graph TD
-    A --> B
-    B --> C
-    C --> D
-    D --> A // 创建循环
-```
+序列图用于描述对象之间的交互过程。以下是一个序列图的示例：
 
----
+\```
+\```mermaid
+sequenceDiagram
+    participant A
+    participant B
+    A->>B: 发送请求
+    B->>A: 返回响应
+\```
+\```
 
-## 6. **样式定制**
+## 类图
 
-### 设置节点颜色：
+类图用于描述系统中的类及其关系。以下是一个类图的示例：
 
-**渲染效果：**
+\```
+\```mermaid
+classDiagram
+    class 动物 {
+        +String 姓名
+        +int 年龄
+        +void 吃()
+        +void 睡觉()
+    }
+    class 狗 {
+        +void 吠()
+    }
+    class 猫 {
+        +void 喵()
+    }
+    动物 <|-- 狗
+    动物 <|-- 猫
+\```
+\```
 
-```mermaid
-graph TD
-    A[节点A] --> B[节点B]
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#ccf,stroke:#333,stroke-width:2px
-```
+## 甘特图
 
-**原始代码：**
+甘特图用于表示项目计划和进度。以下是一个甘特图的示例：
 
-```mermaid
-graph TD
-    A[节点A] --> B[节点B]
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#ccf,stroke:#333,stroke-width:2px
-```
-
-### 定义类并应用：
-
-**渲染效果：**
-
-```mermaid
-graph TD
-    A[节点A] --> B[节点B]
-    class A highlight
-    class B normal
-    classDef highlight fill:#ff0,stroke:#333,stroke-width:2px;
-    classDef normal fill:#cff,stroke:#333,stroke-width:1px;
-```
-
-**原始代码：**
-
-```mermaid
-graph TD
-    A[节点A] --> B[节点B]
-    class A highlight
-    class B normal
-    classDef highlight fill:#ff0,stroke:#333,stroke-width:2px;
-    classDef normal fill:#cff,stroke:#333,stroke-width:1px;
-```
-
----
-
-## 7. **链接（Links）**
-
-**渲染效果：**
-
-```mermaid
-graph LR
-    A[Google] --> B[百度]
-    A --> C[链接到网站](https://www.example.com)
-```
-
-**原始代码：**
-
-```mermaid
-graph LR
-    A[Google] --> B[百度]
-    A --> C[链接到网站](https://www.example.com)
-```
-
----
-
-## 8. **注意事项**
-
-- Mermaid 是一种**声明式**的图表描述语言，不需要用代码计算图形的布局。
-- Mermaid 支持多种输出格式，常见的如 SVG、PNG 等，通常依赖于所使用的环境来生成。
-
----
-
-## 9. **更多图表类型**
-
-除了 `graph`，Mermaid 还支持多种其他类型的图表，包括：
-- **流程图** (`flowchart`)
-- **序列图** (`sequenceDiagram`)
-- **甘特图** (`gantt`)
-- **类图** (`classDiagram`)
-- **状态图** (`stateDiagram`)
-- **饼图** (`pie`)
-
-### 示例：甘特图
-
-**渲染效果：**
-
-```mermaid
+\```
+\```mermaid
 gantt
-    title A Gantt Diagram
-    dateFormat YYYY-MM-DD
-    section Section
-    A task :a1, 2025-02-01, 30d
-    Another task :after a1 , 20d
-```
+    title 项目计划
+    dateFormat  YYYY-MM-DD
+    section 设计
+    需求分析       :done, 2025-01-01, 2025-01-10
+    系统设计       :active, 2025-01-11, 2025-01-20
+    section 开发
+    前端开发       : 2025-01-21, 2025-02-10
+    后端开发       : 2025-02-11, 2025-03-01
+    section 测试
+    单元测试       : 2025-03-02, 2025-03-10
+    集成测试       : 2025-03-11, 2025-03-20
+\```
+\```
 
-**原始代码：**
+## 状态图
 
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat YYYY-MM-DD
-    section Section
-    A task :a1, 2025-02-01, 30d
-    Another task :after a1 , 20d
-```
+状态图用于描述系统的状态及其转换。以下是一个状态图的示例：
 
----
+\```
+\```mermaid
+stateDiagram
+    [*] --> 关闭
+    关闭 --> 打开 : 开按钮
+    打开 --> 关闭 : 关按钮
+    打开 --> 锁定 : 锁按钮
+    锁定 --> 打开 : 解锁按钮
+\```
+\```
 
-## 总结
+## 实体关系图
 
-- Mermaid 是一种简单、灵活的图表绘制语言，可以帮助你在 Markdown 文件中嵌入图表。
-- 使用 `graph` 可以绘制从上到下、从左到右等多种类型的图表。
-- 通过 `classDef` 和 `style` 可以自定义图表样式。
+实体关系图用于描述数据模型中的实体及其关系。以下是一个实体关系图的示例：
 
----
+\```
+\```mermaid
+erDiagram
+    用户 {
+        int id
+        string 姓名
+        string 邮箱
+    }
+    订单 {
+        int id
+        date 日期
+        float 金额
+    }
+    用户 ||--o{ 订单 : 拥有
+\```
+\```
+
+## 饼图
+
+饼图用于显示数据的组成部分。以下是一个饼图的示例：
+
+\```
+\```mermaid
+pie
+    title 项目占比
+    "设计" : 20
+    "开发" : 50
+    "测试" : 30
+\```
+\```
+
+## 结论
+
+以上是Mermaid的常用图表类型和语法示例。通过掌握这些基本语法，您可以在Obsidian中创建各种类型的图表，帮助您更好地组织和展示信息。
+
+````

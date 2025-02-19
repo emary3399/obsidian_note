@@ -1,149 +1,103 @@
-````markdown name=Mermaid使用大全笔记.md
-# Mermaid使用大全笔记
+以下是整理后的Obsidian笔记，每个Mermaid示例都包含可复制的代码块和渲染后的图例说明：
 
-Mermaid是一种基于Markdown的图表和图形生成工具，非常适合在Obsidian中使用。以下是Mermaid的使用大全笔记，包含各种图表类型的示例和常用语法。
+# Mermaid 学习笔记
 
-## 基本语法
+## 目录
+- [1. 使用和部署](#1-使用和部署)
+- [2. 基础配置](#2-基础配置)
+- [3. 绘图语法](#3-绘图语法)
 
-Mermaid图表的基本语法如下：
+---
 
-\```
-\```mermaid
-graph TD
-    A[方形] --> B(圆形)
-    B --> C{菱形}
-    C --> D[方形]
-\```
-\```
+## 1. 使用和部署
 
-上面的例子生成了一个从A到D的图表，其中A指向B，B指向C，C指向D。
+### 1.1 部署方式
+1. **网页版编辑器**  
+   地址：[mermaid-live-editor](https://mermaid-js.github.io/mermaid-live-editor)
 
-## 流程图
+2. **插件方式**  
+   支持VS Code、JetBrains等IDE插件
 
-流程图是Mermaid中最常用的图表类型之一。以下是一个流程图的示例：
-
-\```
-\```mermaid
-graph TD
-    开始 --> 输入数据
-    输入数据 --> 处理数据
-    处理数据 --> 判断{数据有效吗}
-    判断 -->|是| 输出结果
-    判断 -->|否| 结束
-\```
-\```
-
-## 序列图
-
-序列图用于描述对象之间的交互过程。以下是一个序列图的示例：
-
-\```
-\```mermaid
+3. **JavaScript API**  
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+   <script>mermaid.initialize({ startOnLoad: true });</script>
+4.依赖项部署
+npm install -g yarn
+yarn add mermaid
+2. 基础配置
+2.1 主题配置
+%%{init: {'theme':'forest'}}%%
+flowchart LR
+    A --> B
+3. 绘图语法
+3.1 流程图 (Flowcharts)
+基础语法
+flowchart LR
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action]
+    B -->|No| D[End]
+节点形状示例
+flowchart LR
+    A[(数据库)] --> B{{菱形}}
+    C[/斜边矩形/] --> D[普通矩形]
+    E((圆形)) --> F>非对称]
+子图示例
+flowchart TB
+    subgraph 集群
+        A --> B
+    end
+    C --> 集群
+3.2 时序图 (Sequence Diagrams)
+基础示例
 sequenceDiagram
-    participant A
-    participant B
-    A->>B: 发送请求
-    B->>A: 返回响应
-\```
-\```
-
-## 类图
-
-类图用于描述系统中的类及其关系。以下是一个类图的示例：
-
-\```
-\```mermaid
-classDiagram
-    class 动物 {
-        +String 姓名
-        +int 年龄
-        +void 吃()
-        +void 睡觉()
-    }
-    class 狗 {
-        +void 吠()
-    }
-    class 猫 {
-        +void 喵()
-    }
-    动物 <|-- 狗
-    动物 <|-- 猫
-\```
-\```
-
-## 甘特图
-
-甘特图用于表示项目计划和进度。以下是一个甘特图的示例：
-
-\```
-\```mermaid
+    Alice->>John: Hello John!
+    John-->>Alice: Hi Alice!
+循环和条件
+sequenceDiagram
+    loop 每日检查
+        Alice->>John: 状态正常？
+        alt 是
+            John-->>Alice: 一切正常
+        else 否
+            John-->>Alice: 需要维护
+        end
+    end
+3.3 状态图 (State Diagrams)
+基础示例
+stateDiagram-v2
+    [*] --> 待机
+    待机 --> 运行中: 启动
+    运行中 --> 待机: 停止
+    运行中 --> 故障
+    故障 --> [*]
+3.4 用户历程图 (User Journey)
+示例
+journey
+    title 用户购物流程
+    section 浏览
+      用户浏览商品: 5: 用户
+    section 购买
+      添加购物车: 4: 用户
+      完成支付: 3: 用户,支付系统
+3.5 甘特图 (Gantt)
+示例
 gantt
     title 项目计划
-    dateFormat  YYYY-MM-DD
-    section 设计
-    需求分析       :done, 2025-01-01, 2025-01-10
-    系统设计       :active, 2025-01-11, 2025-01-20
-    section 开发
-    前端开发       : 2025-01-21, 2025-02-10
-    后端开发       : 2025-02-11, 2025-03-01
-    section 测试
-    单元测试       : 2025-03-02, 2025-03-10
-    集成测试       : 2025-03-11, 2025-03-20
-\```
-\```
+    dateFormat YYYY-MM-DD
+    section 阶段A
+    需求分析 :a1, 2023-01-01, 10d
+    section 阶段B
+    开发 :2023-01-11, 15d
+提示：在Obsidian中：
 
-## 状态图
+1.直接粘贴代码块即可渲染图表
+2.使用 ```mermaid代码块语法
+3.按Ctrl+Enter强制刷新图表
 
-状态图用于描述系统的状态及其转换。以下是一个状态图的示例：
+---
 
-\```
-\```mermaid
-stateDiagram
-    [*] --> 关闭
-    关闭 --> 打开 : 开按钮
-    打开 --> 关闭 : 关按钮
-    打开 --> 锁定 : 锁按钮
-    锁定 --> 打开 : 解锁按钮
-\```
-\```
-
-## 实体关系图
-
-实体关系图用于描述数据模型中的实体及其关系。以下是一个实体关系图的示例：
-
-\```
-\```mermaid
-erDiagram
-    用户 {
-        int id
-        string 姓名
-        string 邮箱
-    }
-    订单 {
-        int id
-        date 日期
-        float 金额
-    }
-    用户 ||--o{ 订单 : 拥有
-\```
-\```
-
-## 饼图
-
-饼图用于显示数据的组成部分。以下是一个饼图的示例：
-
-\```
-\```mermaid
-pie
-    title 项目占比
-    "设计" : 20
-    "开发" : 50
-    "测试" : 30
-\```
-\```
-
-## 结论
-
-以上是Mermaid的常用图表类型和语法示例。通过掌握这些基本语法，您可以在Obsidian中创建各种类型的图表，帮助您更好地组织和展示信息。
-
-````
+## 注意事项
+1. 所有代码块均可直接复制到Obsidian中使用
+2. 若图表未渲染，检查是否安装Mermaid插件
+3. 复杂图表建议先在[在线编辑器](https://mermaid.live)测试

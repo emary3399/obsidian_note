@@ -4,7 +4,7 @@ Mermaid 是一种简单的图表绘制语言，可以帮助你在 Markdown 中�
 
 
 ```
-#### 基本结构：
+
 ```mermaid
 graph [方向]
     节点1 --> 节点2
@@ -13,12 +13,14 @@ graph [方向]
 ```
 ```
 
-
+```mermaid
 - **方向**：`graph` 后面可以跟一个方向标识符：
   - `TD`（Top Down）：从上到下
   - `LR`（Left Right）：从左到右
   - `RL`（Right Left）：从右到左
   - `BT`（Bottom Top）：从下到上
+```
+
 
 #### 示例：
 ```mermaid

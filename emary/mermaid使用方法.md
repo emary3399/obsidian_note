@@ -75,12 +75,13 @@ pie
 ## Markdown 中使用 Mermaid
 
 在 Markdown 文件中使用 Mermaid，只需要使用代码块语法，并将代码块的语言标识为 `mermaid`。例如：
-
+```
     ```mermaid
     graph TD;
         A-->B;
         A-->C;
         B-->D;
         C-->D;
-    ```
+```
+   ``` 
 

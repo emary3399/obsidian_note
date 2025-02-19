@@ -2,9 +2,9 @@
 
 ---
 
-### 1. **基本语法**
+## 1. **基本语法**
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph TD
@@ -22,13 +22,13 @@ graph [方向]
     节点2 --> 节点4
 ```
 
-方向选项：
+**方向选项：**
 - `TD`（Top Down）：从上到下
 - `LR`（Left Right）：从左到右
 - `RL`（Right Left）：从右到左
 - `BT`（Bottom Top）：从下到上
 
-#### 示例：
+**示例：**
 
 ```mermaid
 graph LR
@@ -41,9 +41,9 @@ graph LR
 
 ---
 
-### 2. **节点和连线**
+## 2. **节点和连线**
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph LR
@@ -61,9 +61,9 @@ graph LR
 
 ---
 
-### 3. **子图（Subgraphs）**
+## 3. **子图（Subgraphs）**
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph LR
@@ -74,7 +74,6 @@ graph LR
     subgraph 组2
         C[节点C]
     end
-
     A --> C
     B --> C
 ```
@@ -90,16 +89,15 @@ graph LR
     subgraph 组2
         C[节点C]
     end
-
     A --> C
     B --> C
 ```
 
 ---
 
-### 4. **条件和决策**
+## 4. **条件和决策**
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph LR
@@ -123,16 +121,16 @@ graph LR
 
 ---
 
-### 5. **循环**
+## 5. **循环**
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph TD
     A --> B
     B --> C
     C --> D
-    D --> A  // 创建循环
+    D --> A // 创建循环
 ```
 
 **原始代码：**
@@ -142,16 +140,16 @@ graph TD
     A --> B
     B --> C
     C --> D
-    D --> A  // 创建循环
+    D --> A // 创建循环
 ```
 
 ---
 
-### 6. **样式定制**
+## 6. **样式定制**
 
-#### 设置节点颜色：
+### 设置节点颜色：
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph TD
@@ -169,16 +167,15 @@ graph TD
     style B fill:#ccf,stroke:#333,stroke-width:2px
 ```
 
-#### 定义类并应用：
+### 定义类并应用：
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph TD
     A[节点A] --> B[节点B]
     class A highlight
     class B normal
-
     classDef highlight fill:#ff0,stroke:#333,stroke-width:2px;
     classDef normal fill:#cff,stroke:#333,stroke-width:1px;
 ```
@@ -190,16 +187,15 @@ graph TD
     A[节点A] --> B[节点B]
     class A highlight
     class B normal
-
     classDef highlight fill:#ff0,stroke:#333,stroke-width:2px;
     classDef normal fill:#cff,stroke:#333,stroke-width:1px;
 ```
 
 ---
 
-### 7. **链接（Links）**
+## 7. **链接（Links）**
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 graph LR
@@ -217,14 +213,14 @@ graph LR
 
 ---
 
-### 8. **注意事项**
+## 8. **注意事项**
 
 - Mermaid 是一种**声明式**的图表描述语言，不需要用代码计算图形的布局。
 - Mermaid 支持多种输出格式，常见的如 SVG、PNG 等，通常依赖于所使用的环境来生成。
 
 ---
 
-### 9. **更多图表类型**
+## 9. **更多图表类型**
 
 除了 `graph`，Mermaid 还支持多种其他类型的图表，包括：
 - **流程图** (`flowchart`)
@@ -234,17 +230,17 @@ graph LR
 - **状态图** (`stateDiagram`)
 - **饼图** (`pie`)
 
-#### 示例：甘特图
+### 示例：甘特图
 
-渲染效果：
+**渲染效果：**
 
 ```mermaid
 gantt
     title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
+    dateFormat YYYY-MM-DD
     section Section
-    A task           :a1, 2025-02-01, 30d
-    Another task     :after a1  , 20d
+    A task :a1, 2025-02-01, 30d
+    Another task :after a1 , 20d
 ```
 
 **原始代码：**
@@ -252,17 +248,18 @@ gantt
 ```mermaid
 gantt
     title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
+    dateFormat YYYY-MM-DD
     section Section
-    A task           :a1, 2025-02-01, 30d
-    Another task     :after a1  , 20d
+    A task :a1, 2025-02-01, 30d
+    Another task :after a1 , 20d
 ```
 
-### 总结
+---
+
+## 总结
 
 - Mermaid 是一种简单、灵活的图表绘制语言，可以帮助你在 Markdown 文件中嵌入图表。
 - 使用 `graph` 可以绘制从上到下、从左到右等多种类型的图表。
 - 通过 `classDef` 和 `style` 可以自定义图表样式。
 
 ---
-

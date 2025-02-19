@@ -1,7 +1,5 @@
 # Mermaid 使用笔记
 
-Mermaid 是一个基于 JavaScript 的图表绘制工具，支持在 Markdown 文件中嵌入各种图表。以下是一些常用的 Mermaid 图表及其语法示例：
-
 ## 流程图
 
 ```mermaid
@@ -86,4 +84,3 @@ pie
         C-->D;
     ```
 
-希望这些示例能帮助你快速上手 Mermaid 的使用。

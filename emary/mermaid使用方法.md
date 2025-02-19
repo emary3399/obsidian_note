@@ -1,9 +1,8 @@
-Mermaid 是一种简单的图表绘制语言，可以帮助你在 Markdown 中创建各种类型的图表。Mermaid 支持多种图表类型，其中 `graph` 是用于绘制图形和思维导图的常用语法。下面是一些关于 `graph` 的基本语法和进阶用法。
+好的！我已经调整了格式，适合放进 Obsidian 笔记里，确保易于阅读和操作。以下是调整后的版本：
+
+---
 
 ### 1. **基本语法**
-
-
-```
 
 ```mermaid
 graph [方向]
@@ -11,18 +10,9 @@ graph [方向]
     节点1 --> 节点3
     节点2 --> 节点4
 ```
-```
 
-```mermaid
-- **方向**：`graph` 后面可以跟一个方向标识符：
-  - `TD`（Top Down）：从上到下
-  - `LR`（Left Right）：从左到右
-  - `RL`（Right Left）：从右到左
-  - `BT`（Bottom Top）：从下到上
-```
+#### 示例代码：
 
-
-#### 示例：
 ```mermaid
 graph LR
     A --> B
@@ -38,6 +28,7 @@ graph LR
 
 #### 创建节点：
 节点可以是简单的文本，也可以用 HTML 标签来进行格式化。
+
 ```mermaid
 graph LR
     A[圆形节点] --> B[矩形节点]
@@ -47,6 +38,8 @@ graph LR
 - `[文本]`：表示一个矩形节点。
 - `([文本])`：表示一个圆形节点。
 - `{文本}`：表示一个圆角矩形节点。
+
+#### 示例代码：
 
 ```mermaid
 graph LR
@@ -75,7 +68,6 @@ graph LR
 ```
 
 - `subgraph` 定义了一个子图，`end` 表示子图结束。
-- 子图有助于组织复杂的图形，减少图表混乱。
 
 ---
 
@@ -115,6 +107,7 @@ graph TD
 你可以为节点和边设置样式，通过 `style` 和 `classDef` 来进行定制。
 
 #### 设置节点颜色：
+
 ```mermaid
 graph TD
     A[节点A] --> B[节点B]
@@ -123,6 +116,7 @@ graph TD
 ```
 
 #### 定义类并应用：
+
 ```mermaid
 graph TD
     A[节点A] --> B[节点B]
@@ -132,9 +126,6 @@ graph TD
     classDef highlight fill:#ff0,stroke:#333,stroke-width:2px;
     classDef normal fill:#cff,stroke:#333,stroke-width:1px;
 ```
-
-- `classDef` 用于定义样式类。
-- `class` 用于将样式类应用到特定节点。
 
 ---
 
@@ -166,8 +157,9 @@ graph LR
 - **类图** (`classDiagram`)
 - **状态图** (`stateDiagram`)
 - **饼图** (`pie`)
-  
-示例：甘特图
+
+#### 示例：甘特图
+
 ```mermaid
 gantt
     title A Gantt Diagram
@@ -183,3 +175,6 @@ gantt
 - 使用 `graph` 可以绘制从上到下、从左到右等多种类型的图表。
 - 通过 `classDef` 和 `style` 可以自定义图表样式。
 
+---
+
+这样，格式更加清晰，适合直接复制到 Obsidian 中。如果需要进一步的调整或添加内容，随时告诉我！

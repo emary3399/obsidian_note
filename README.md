@@ -13,7 +13,7 @@
 - **双链笔记**：通过 `[[内部链接]]` 实现知识点关联
 - **可视化学习**：支持关系图谱、大纲视图、时间线等展示
 - **备考友好**：重点标注 + 记忆口诀 + 真题示例
-- **多端同步**：支持PC/手机随时查阅（需配置同步方案）
+- **多端同步**：支持 PC/手机随时查阅（需配置同步方案）
 
 ---
 
@@ -41,34 +41,51 @@
 │   ├── 历年真题解析/
 │   └── 高频错题集.md
 └── 资源索引.md  # 重要文件/网站/工具汇总
+```
 
+## 🚀 快速开始
+1. 安装 Obsidian
+2. 克隆本仓库：`git clone https://github.com/yourusername/public-basic-notes.git`
+3. 在 Obsidian 中打开仓库文件夹作为新库
+4. 推荐安装插件：
+   - Dataview：动态生成数据表格
+   - Templater：快速创建标准化笔记
+   - Kanban：任务看板管理学习进度
 
-🚀 快速开始
+## 🔄 更新计划
+- [x] 基础法律模块搭建
+- [ ] 完善经济学供需曲线图解
+- [ ] 添加 2023 年时政专题
+- [ ] 开发选择题快速复习模板
+- [ ] 制作高频考点思维导图
 
-安装 Obsidian克隆本仓库：git clone https://github.com/yourusername/public-basic-notes.git
-
-在Obsidian中打开仓库文件夹作为新库推荐安装插件：
-
-Dataview：动态生成数据表格Templater：快速创建标准化笔记Kanban：任务看板管理学习进度
-
-
-🔄 更新计划
-
-[x] 基础法律模块搭建[ ] 完善经济学供需曲线图解[ ] 添加2023年时政专题[ ] 开发选择题快速复习模板[ ] 制作高频考点思维导图
-
-🤝 贡献指南
+## 🤝 贡献指南
 欢迎通过 Issue 或 PR 参与共建：
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/xxx`)
+3. 提交修改 (`git commit -m 'feat: 添加xxx内容'`)
+4. 推送分支 (`git push origin feature/xxx`)
+5. 新建 Pull Request
 
-Fork 本仓库创建特性分支 (git checkout -b feature/xxx)提交修改 (git commit -m 'feat: 添加xxx内容')推送分支 (git push origin feature/xxx)新建 Pull Request
-笔记规范：
+**笔记规范**：
+- 使用三级标题以内层级
+- 关键术语用 `==高亮标注==`
+- 添加 `#标签` 进行分类
+- 复杂图表使用 Mermaid 或 Excalidraw
 
-使用三级标题以内层级关键术语用==高亮标注==添加 #标签 进行分类复杂图表使用 Mermaid 或 Excalidraw
-
-📜 使用许可
+## 📜 使用许可
 本仓库采用 MIT License，标注来源即可自由使用。备考资料仅供参考，请以官方文件为准。
-
 
 ---
 
-💡 **提示**：在Obsidian中按 `Ctrl/Cmd+P` 调出命令面板，尝试「打开图谱视图」查看知识关联！
+## 💡 **提示**
+在 Obsidian 中按 `Ctrl/Cmd+P` 调出命令面板，尝试「打开图谱视图」查看知识关联！
+
+**这个 README 包含**：
+- 醒目的徽章标识技术栈
+- 清晰的内容导航结构
+- Obsidian 专属功能提示
+- 持续更新标识增强可信度
+- 贡献引导促进社区共建
+- 可视化元素提升可读性
 

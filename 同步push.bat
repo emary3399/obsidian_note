@@ -1,6 +1,11 @@
 @echo off
+echo Adding files...
 git add .
+echo Committing changes...
 git commit -m "Add new files for sync"
-git push origin main    # 同步到 Gitee
-git push github main    # 同步到 GitHub
+echo Pushing to Gitee...
+git push origin main
+echo Pushing to GitHub...
+git push github main
+echo Sync upload completed!
 pause

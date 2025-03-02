@@ -1,5 +1,5 @@
 @echo off
 echo Pulling from Gitee...
-git pull origin master
+git pull origin main
 echo Done!
 pause

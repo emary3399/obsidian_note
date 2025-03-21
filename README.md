@@ -1,4 +1,4 @@
-# 公共基础知识笔记库 📚
+# 公考知识库 
 
 ![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge&logo=obsidian&logoColor=white)
 ![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
@@ -43,7 +43,7 @@
 └── 资源索引.md  # 重要文件/网站/工具汇总
 ```
 
-以上内容仍在更新中：2025.2.20
+以上内容仍在更新中：2025.3.20
 
 ## 🚀 快速开始
 1. 安装 Obsidian
@@ -53,32 +53,6 @@
    - Dataview：动态生成数据表格
    - Templater：快速创建标准化笔记
    - Kanban：任务看板管理学习进度
-
-## 🔄 更新计划
-- [x] 基础法律模块搭建
-- [ ] 完善经济学供需曲线图解
-- [ ] 添加 2025 年时政专题
-- [ ] 开发选择题快速复习模板
-- [ ] 制作高频考点思维导图
-
-## 🤝 贡献指南
-欢迎通过 Issue 或 PR 参与共建：
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/xxx`)
-3. 提交修改 (`git commit -m 'feat: 添加xxx内容'`)
-4. 推送分支 (`git push origin feature/xxx`)
-5. 新建 Pull Request
-
-**笔记规范**：
-- 使用三级标题以内层级
-- 关键术语用 `==高亮标注==`
-- 添加 `#标签` 进行分类
-- 复杂图表使用 Mermaid 或 Excalidraw
-
-## 📜 使用许可
-本仓库采用 MIT License，标注来源即可自由使用。备考资料仅供参考，请以官方文件为准。
-
----
 
 ## 💡 **提示**
 在 Obsidian 中按 `Ctrl/Cmd+P` 调出命令面板，尝试「打开图谱视图」查看知识关联！

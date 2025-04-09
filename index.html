@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Obsidian Notes</h1>
+    <ul id="file-list">
+        <!-- 文件列表会通过 JavaScript 动态生成 -->
+    </ul>
+
+    <script>
+        // 替换为您的仓库信息
+        const owner = "emary3399";
+        const repo = "obsidian_note";
+
+        // GitHub API 获取文件目录
+        async function fetchFiles() {
+            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents`);
+            if (!response.ok) {
+                console.error("Failed to fetch files.");
+                return;
+            }
+            const files = await response.json();
+            const fileList = document.getElementById("file-list");
+
+            files.forEach(file => {
+                if (file.type === "file" && file.name.endsWith(".md")) { // 只显示Markdown文件
+                    const listItem = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.textContent = file.name;
+                    link.href = `./${file.name}`; // 文件链接
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                }
+            });
+        }
+
+        // 调用函数
+        fetchFiles();
+    </script>
+</body>
+</html>

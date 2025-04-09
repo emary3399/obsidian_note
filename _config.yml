@@ -1,0 +1,34 @@
+# 网站的基本信息
+title: Obsidian Notes
+description: A collection of notes in Markdown format
+baseurl: "/obsidian_note" # 仓库名称，确保路径正确
+url: "https://emary3399.github.io" # 您的 GitHub Pages URL
+
+# Markdown 处理器
+markdown: kramdown
+
+# Jekyll 主题
+theme: minima # 或者其他主题，如 jekyll-theme-cayman 等
+
+# 目录设置
+permalink: pretty # 生成漂亮的 URL
+exclude:
+  - README.md # 排除不需要显示的文件
+
+# 插件（可选）
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 高级配置（根据需要）
+kramdown:
+  input: GFM # 支持 GitHub Flavored Markdown
+  auto_ids: true
+
+# 自定义选项
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

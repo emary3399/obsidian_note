@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -10,13 +10,22 @@
 </head>
 <body>
   <div id="app"></div>
+
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
-    }
+      name: 'emaryの知识库（测试版）',
+      repo: 'https://github.com/emary3399/obsidian_note',
+      loadNavbar: true,
+      plugins: [
+        DocsifyCopyCode()
+      ]
+    };
   </script>
+
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 引入 Docsify Copy Code 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 </body>
 </html>

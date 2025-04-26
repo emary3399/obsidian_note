@@ -1,5 +1,3 @@
-# SPOOLING技术与打印机共享解决方案
-
 ## 1. SPOOLING技术流程图 (Mermaid)
 ```mermaid
 graph LR

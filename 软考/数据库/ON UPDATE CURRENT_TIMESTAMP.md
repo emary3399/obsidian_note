@@ -1,4 +1,4 @@
-这个问题问得非常专业！你说的这句：
+
 
 ```sql
 updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -86,7 +86,3 @@ SET NEW.updated_at = NOW();
 ## ✅ 小结一句话：
 
 > `ON UPDATE CURRENT_TIMESTAMP` 就像给字段加了一个“自带定时器”，任何值更新，它就自己记下“我最后被动过的时间”。
-
----
-
-需要我再用实际表结构和数据来演示下效果吗？也可以给你写一个小 demo SQL 脚本放到 Obsidian 或 GitHub 上随时查阅。
